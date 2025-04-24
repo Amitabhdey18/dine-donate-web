@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { food } from "lucide-react";
+import { UtensilsCrossed } from "lucide-react";
 
 interface FoodCardProps {
   title: string;
@@ -25,7 +25,7 @@ const FoodCard = ({ title, quantity, location, expiresIn, image }: FoodCardProps
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <div className="space-y-2 text-sm text-gray-600">
           <p className="flex items-center gap-2">
-            <food className="h-4 w-4" />
+            <UtensilsCrossed className="h-4 w-4" />
             Quantity: {quantity}
           </p>
           <p>Location: {location}</p>

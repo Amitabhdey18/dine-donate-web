@@ -2,7 +2,8 @@
 import Navbar from "@/components/Navbar";
 import FoodCard from "@/components/FoodCard";
 import { Button } from "@/components/ui/button";
-import { handHeart, utensils, store } from "lucide-react";
+import { HandHeart, Utensils, Store } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const foodItems = [
@@ -43,12 +44,16 @@ const Index = () => {
             Join our mission to reduce food waste and help feed communities by connecting hotels and cafes with NGOs and individuals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-lg py-6">
-              I Want to Donate Food
-            </Button>
-            <Button variant="outline" className="text-lg py-6">
-              I Need Food
-            </Button>
+            <Link to="/donate">
+              <Button className="bg-emerald-600 hover:bg-emerald-700 text-lg py-6 w-full sm:w-auto">
+                I Want to Donate Food
+              </Button>
+            </Link>
+            <Link to="/request">
+              <Button variant="outline" className="text-lg py-6 w-full sm:w-auto">
+                I Need Food
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -60,21 +65,21 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <store className="w-8 h-8 text-emerald-600" />
+                <Store className="w-8 h-8 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">List Surplus Food</h3>
               <p className="text-gray-600">Hotels and cafes can easily list their surplus food items</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <handHeart className="w-8 h-8 text-emerald-600" />
+                <HandHeart className="w-8 h-8 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Connect</h3>
               <p className="text-gray-600">NGOs and individuals can browse and request available food</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <utensils className="w-8 h-8 text-emerald-600" />
+                <Utensils className="w-8 h-8 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Distribute</h3>
               <p className="text-gray-600">Coordinate pickup and distribute food to those in need</p>
