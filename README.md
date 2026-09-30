@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# 🍽️ FoodBridge — Food Waste Management & Donation Platform
 
-## Project info
+FoodBridge connects hotels, restaurants, and cafés that have surplus food with NGOs, shelters, and individuals who need it — turning would-be food waste into meals for the community.
 
-**URL**: https://lovable.dev/projects/01bdf809-bb0f-4d42-8ebc-3aa407590134
+> Every year, millions of tonnes of edible food are thrown away while people go hungry. FoodBridge makes it effortless for food businesses to donate and for recipients to claim what's available — safely, quickly, and for free.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **For Donors (Hotels, Cafés, Restaurants)**
+  - Post surplus food with quantity, pickup window, and location
+  - Simple donation form — takes under a minute
+  - Track what has been donated and claimed
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/01bdf809-bb0f-4d42-8ebc-3aa407590134) and start prompting.
+- **For Recipients (NGOs, Shelters, Individuals)**
+  - Browse available food donations in real time
+  - Claim items that match your community's needs
+  - Request-based intake for organizations with specific needs
 
-Changes made via Lovable will be committed automatically to this repo.
+- **General**
+  - Fully responsive design — works on mobile, tablet, and desktop
+  - Clean, warm, community-first interface
+  - Fast, client-side routing with dedicated pages for donors and recipients
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Technology | Purpose |
+|------------|---------|
+| [React 18](https://react.dev) | UI framework |
+| [Vite 5](https://vitejs.dev) | Build tool & dev server |
+| [TypeScript 5](https://www.typescriptlang.org) | Type-safe JavaScript |
+| [Tailwind CSS 3](https://tailwindcss.com) | Utility-first styling |
+| [shadcn/ui](https://ui.shadcn.com) | Accessible UI components (Radix UI) |
+| [React Router 6](https://reactrouter.com) | Client-side routing |
+| [Lucide React](https://lucide.dev) | Icons |
 
-Follow these steps:
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** 18 or later — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **npm** 9 or later (ships with Node.js)
+
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# 1. Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# 2. Navigate into the project
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 3. Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Start the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app runs at **http://localhost:8080** with hot reloading enabled.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run build:dev` | Create a development-mode build |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint across the project |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📁 Project Structure
 
-This project is built with:
+```
+├── public/               # Static assets (favicon, robots.txt)
+├── src/
+│   ├── components/
+│   │   └── ui/           # shadcn/ui component library
+│   ├── hooks/            # Custom React hooks (use-mobile, use-toast)
+│   ├── lib/              # Utilities (class merging, helpers)
+│   ├── pages/            # Route-level page components
+│   ├── App.tsx           # Root component with routes
+│   ├── index.css         # Global styles & design tokens
+│   └── main.tsx          # App entry point
+├── index.html            # HTML template
+├── tailwind.config.ts    # Tailwind configuration
+├── vite.config.ts        # Vite configuration
+└── package.json
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🌍 Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/01bdf809-bb0f-4d42-8ebc-3aa407590134) and click on Share -> Publish.
+**Publish from Lovable:** open your [Lovable project](https://lovable.dev/projects/01bdf809-bb0f-4d42-8ebc-3aa407590134) and click **Share → Publish**.
 
-## Can I connect a custom domain to my Lovable project?
+**Self-host with Vite:** run `npm run build` and serve the contents of `dist/` on any static host (Netlify, Vercel, GitHub Pages, etc.).
 
-Yes, you can!
+### Custom Domain
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Go to **Project → Settings → Domains → Connect Domain** in Lovable.
+See the [custom domain guide](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide).
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is available for use under the MIT License.
+
+---
+
+## 📬 Contact & Support
+
+Built with ❤️ using [Lovable](https://lovable.dev).
+Questions or partnership enquiries? Reach out through the project repository.
+
+---
+
+*Together we can make sure good food never goes to waste.* 🌱
